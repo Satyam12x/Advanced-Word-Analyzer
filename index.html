@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Text Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🔍 Advanced Text Analyzer</h1>
+    <p class="subheading">Analyze your text efficiently with real-time insights</p>
+
+    <textarea id="text-input" placeholder="Start typing here..."></textarea>
+
+    <div id="counter-container" class="counter">
+      <div class="count-card">
+        <p>Words</p>
+        <span id="word-count">0</span>
+      </div>
+      <div class="count-card">
+        <p>Characters</p>
+        <span id="char-count">0</span>
+      </div>
+      <div class="count-card">
+        <p>Sentences</p>
+        <span id="sentence-count">0</span>
+      </div>
+      <div class="count-card">
+        <p>Paragraphs</p>
+        <span id="paragraph-count">0</span>
+      </div>
+      <div class="count-card">
+        <p>Reading Time</p>
+        <span id="reading-time">0 mins</span>
+      </div>
+      <div class="count-card">
+        <p>Words Per Minute</p>
+        <span id="wpm">0</span>
+      </div>
+      <div class="count-card">
+        <p>Most Frequent Word</p>
+        <span id="frequent-word">N/A</span>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button id="copy-btn"><i class="fas fa-copy"></i> Copy Text</button>
+      <button id="clear-btn"><i class="fas fa-trash"></i> Clear Text</button>
+      <button id="download-btn"><i class="fas fa-download"></i> Download Text</button>
+    </div>
+    
+    <div id="feedback-message" class="feedback-message"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

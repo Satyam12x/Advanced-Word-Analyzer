@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #121212;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  background: #1e1e1e;
+  border-radius: 10px;
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.5);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: cyan;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+.subheading {
+  font-size: 1rem;
+  color: #aaaaaa;
+  margin-bottom: 20px;
+}
+
+#text-input {
+  width: 100%;
+  height: 200px;
+  padding: 15px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: 1px solid #333;
+  background-color: #333;
+  color: white;
+  margin-bottom: 20px;
+  resize: none;
+}
+
+#text-input:focus {
+  outline: none;
+  border-color: cyan;
+}
+
+.counter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.count-card {
+  background-color: #222;
+  border: 1px solid cyan;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  width: calc(33% - 10px);
+  min-width: 150px;
+}
+
+.count-card p {
+  font-size: 0.8rem;
+  color: #aaaaaa;
+  margin-bottom: 5px;
+}
+
+.count-card span {
+  font-size: 1.2rem;
+  color: cyan;
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+button {
+  background-color: cyan;
+  color: #121212;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 150px;
+}
+
+button i {
+  margin-right: 5px;
+}
+
+button:hover {
+  background-color: #00bcd4;
+}
+
+.feedback-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px 25px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  text-align: center;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  body{
+    align-items: start;
+  }
+  .count-card {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  #text-input {
+    height: 150px;
+  }
+
+  h1 {
+    font-size: calc(1.0rem + 1.5vw);
+    margin-bottom: 10px;
+  }
+  .subheading{
+    font-size: calc(0.55rem + 1.5vw);
+  }
+  .container {
+    padding: 20px;
+  }
+}
+@media (max-width: 600px){
+  .counter{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
